@@ -2,14 +2,17 @@ import {
   HomeIcon,
   UserCircleIcon,
   TableCellsIcon,
-  InformationCircleIcon,
+  ClipboardDocumentListIcon,
+  BuildingStorefrontIcon,
   ServerStackIcon,
   RectangleStackIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
+
+import { Tables, Notifications } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
 
-import { HomeCashier, Orders } from "@/pages/dashboardCaissier";
+import { HomeCashier, Orders, Restaurant } from "@/pages/dashboardCaissier";
+import ProfileCashier from "@/pages/dashboardCaissier/ProfileCashier";
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -25,35 +28,23 @@ export const routesCahier = [
         path: "/home",
         element: <HomeCashier />,
       },
-       {
-        icon: <HomeIcon {...icon} />,
+      {
+        icon: <ClipboardDocumentListIcon {...icon} />,
         name: "Gestion des commandes",
         path: "/commande",
         element: <Orders />,
       },
-       {
-        icon: <HomeIcon {...icon} />,
+      {
+        icon: <BuildingStorefrontIcon {...icon} />,
         name: "Gestion du restaurant",
         path: "/restaurant",
-        element: <Home />,
+        element: <Restaurant />,
       },
       {
         icon: <UserCircleIcon {...icon} />,
         name: "profile",
         path: "/profile",
-        element: <Profile />,
-      },
-      {
-        icon: <TableCellsIcon {...icon} />,
-        name: "tables",
-        path: "/tables",
-        element: <Tables />,
-      },
-      {
-        icon: <InformationCircleIcon {...icon} />,
-        name: "notifications",
-        path: "/notifications",
-        element: <Notifications />,
+        element: <ProfileCashier />,
       },
     ],
   },

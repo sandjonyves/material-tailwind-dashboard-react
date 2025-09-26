@@ -8,7 +8,7 @@ function App() {
       <Route path="/dashboard/*" element={<Dashboard />} />
       <Route path="/dashboard-cashier/*" element={<DashboardCashier />} />
       <Route path="/auth/*" element={<Auth />} />
-      <Route path="*" element={<Navigate to="/dashboard/home" replace />} />
+      <Route path="*" element={<Navigate to="/dashboard-cashier/home" replace />} />
     </Routes>
   );
 }
