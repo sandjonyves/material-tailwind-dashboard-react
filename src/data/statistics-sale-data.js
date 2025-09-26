@@ -104,7 +104,7 @@ const completedTasksChart = {
   ],
 };
 
-export const statisticsChartsData = [
+export const statisticsSalesData = [
   {
     color: "white",
     title: "Website View",
@@ -128,4 +128,4 @@ export const statisticsChartsData = [
   },
 ];
 
-export default statisticsChartsData;
+export default statisticsSalesData;
